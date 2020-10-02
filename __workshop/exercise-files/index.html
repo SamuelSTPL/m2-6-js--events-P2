@@ -5,10 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Jost:400,700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Signup Form</title>
   </head>
   <body>
+    <div id="main">
+      <form id="form">
+        <h1>Signup Form</h1>
+        <div class="top">
+          <label>Full name:</label>
+          <input type="text" name="name" id="name" required class="inputs"/>
+        </div>
+        <div class="top">
+          <label>Street address:</label>
+          <input type="text" name="street" id="street" required class="inputs"/>
+        </div>
+        <div class="top">
+          <label>Email address:</label>
+          <input type="email" name="email" id="email" required class="inputs"/>
+        </div>
+        <div class="top">
+          <label>Phone number:</label>
+          <input type="text" name="phone" id="phone" required class="inputs"/>
+        </div>
+        <div class="top">
+          <label>Password:</label>
+          <input type="password" name="password" id="password" required class="inputs"/>
+        </div>
+        <div class="top">
+          <label>Confirm Password:</labels>
+          <input
+            type="password"
+            name="comfirmedPassword"
+            id="comfirmedPassword"
+            required
+            class="inputs"
+          />
+        </div>
+        <div id="termsOfService">
+          <input type="checkbox" name="terms" id="terms" />
+          <label> I agree to the <a href="#">terms of service</a>. </label>
+        </div>
+        <div id="error">
+          <p id="textError"></p>
+        </div>
+        <footer id="footer">
+          <button class="buttons" id="clear">Clear</button>
+          <button class="buttons" id="submit">Submit</button>
+        </footer>
+      </form>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

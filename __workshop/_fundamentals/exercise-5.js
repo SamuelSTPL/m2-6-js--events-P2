@@ -86,11 +86,21 @@ const staffMembers = [
 ];
 
 const getData = (arr, key, val) => {
-  // return something
+  if (key === "javascript" || key === "python" || key === "sql") {
+    let found = arr.filter(function (person) {
+      return person.skillLevels[key] > val;
+    });
+    return found;
+  } else {
+    let found = arr.filter(function (person) {
+      return person[key] === val;
+    });
+    return found;
+  }
 };
 
 // 2. Do a console.log to verify your function.
-
+console.log(getData(staffMembers, "title", "Web Developer II"));
 // 3. Run the test to validate: yarn test exercise-5
 
 module.exports = { getData, staffMembers };
